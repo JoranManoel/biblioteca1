@@ -1,5 +1,11 @@
 <?php 
 
+    session_start();
+
+    if(!$_SESSION['email']){
+        header('Location: ../login.php');
+    }
+
     include "../conexao.php";
 
     $id = $_GET['id'];
